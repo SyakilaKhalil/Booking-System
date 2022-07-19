@@ -80,8 +80,7 @@
 						<button type="button" class="btn1 mt-3 mb-5">Login</button>
 					</div>
 				</div>
-				<a href="#">Forgot password</a>
-				<p>Don't have account?<a onclick="window.location.href='CreateAcc.jsp';">Register here</a></p>
+				<p>Don't have account? <a onclick="window.location.href='CreateAcc.jsp';">Register here</a></p>
 			</form>
 		</div>
 		</div>

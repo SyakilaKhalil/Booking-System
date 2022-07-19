@@ -19,10 +19,57 @@
 	.banner{
 		height:100vh;
 		width: 100%;
-		background:url('img2.jpg');
+		background:url('img3.jpeg');
 		background-position:center;
 		background-size:cover;
 		background-repeat: no-repeat;
+	}
+	.banner .navbar{
+		margin-top:2%;	
+	}
+	.banner .navbar-brand{
+		color:#fff;	
+		font-size:22px;
+		font-weight:700;
+		margin-left:10%;
+	}
+	.banner .nav{
+		margin-right:10%;	
+	}
+	.banner .nav li a{
+		color:#aaa;
+	 	font-size:1.2em;
+	}
+	.banner .nav li a:hover{
+		color:white;
+	}
+	.banner .info{
+		margin-top:15%;
+		transform: translateY(-15%);
+	}
+	.banner .info h1{
+		font-size:2.3em;
+		font-weight:700;
+		color:#fff;
+		letter-spacing:2px;
+		margin-top:10px;
+	}
+	.banner .info p{
+		font-weight:500;
+		color:#F5F5DC;
+		letter-spacing:2px;
+	}
+	.banner .info a{
+		margin-left:50%;
+		transform: translateX(-50%);
+		color:#fff;
+		background:#B22222;
+		font-size:25px;
+		font-weight:600;
+	}
+		.banner .info a:hover{
+		background:#e91e63;
+		
 	}
 	</style>
 <title>Home page</title>
@@ -31,9 +78,9 @@
 <div class="container-fluid banner">
 	<div class="row">
 		<div class="col-md-12">
-			<nav class="navbar">
+			<nav class="navbar navbar-md">
 				<div class="navbar-brand">
-					CAMP BOOKING
+					MALAYSIA CAMPING
 				</div>
 				<ul class="nav">
 					<li class="nav-item">
@@ -43,13 +90,21 @@
 						<a class="nav-link" href="#">ACCOUNT</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">BOOKING</a>
+						<a class="nav-link" href="#">BOOKING HISTORY</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">LOGOUT</a>
 					</li>
 				</ul>
 			</nav>
+		</div>
+		<div class="col-md-8 offset-md-2 info">
+			<h1 class="text-center mb-">BOOKING FORM</h1>
+			<p class="text-center ">
+				Campgrounds await your exploration and discovery throughout Malaysia. 
+			</p>
+			<a href="#" class="btn btn-md text-center mt-5">GET STARTTED</a>
+		
 		</div>
 	</div>
 </div>
