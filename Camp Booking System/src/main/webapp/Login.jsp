@@ -21,11 +21,27 @@
 		.row{
 			background: white;
 			border-radius: 30px;
+			
 		}
 		img{
 			border-top-left-radius: 30px;
 			border-bottom-left-radius: 30px;
 			
+		}
+		.btn1{
+			border:none; 
+			outline:none;
+			height:50px;
+			width: 100%;
+			background-color: black;
+			color: white;
+			border-radius: 4px;
+			font-weight:bold;
+		}
+		.btn1:hover{
+			background: white;
+			border: 1px solid;
+			color: black;
 		}
 	</style>
 </head>
@@ -37,21 +53,24 @@
 			<div class="col-lg-5">
 				<img src="img.jpg" class="img-fluid" alt="">
 			</div>
-		<div class="col-lg-7">
+		<div class="col-lg-7 px-5 pt-5"  >
+			<h1 class="font-weight-bold py-3" >Camp Booking</h1>
+			<br>
+			<h4>Sign into your account</h4>
 			<form action="">
 				<div class="form-row">
 					<div class="col-lg-7">
-						<input type="email" placeholder="Email-Address" class="form-control">
+						<input type="email" placeholder="Email-Address" class="form-control mt-5 my-3 p-4">
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="col-lg-7">
-						<input type="password" placeholder="********" class="form-control">
+						<input type="password" placeholder="********" class="form-control my-3 p-4">
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="col-lg-7">
-						<button type="button" class="btn1">Login</button>
+						<button type="button" class="btn1 mt-3 mb-5">Login</button>
 					</div>
 				</div>
 				<a href="#">Forgot password</a>
