@@ -4,14 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Registration Page</title>
+<title>Update Page</title>
 </head>
 <style>
-/* @extend display-flex; */
-display-flex, .display-flex, .display-flex-center, .signup-content{
-  display: flex;
-  display: -webkit-flex; }
-
 a:focus, a:active {
   text-decoration: none;
   outline: none;
@@ -20,13 +15,6 @@ a:focus, a:active {
   -webkit-transition: all 300ms ease 0s;
   -o-transition: all 300ms ease 0s;
   -ms-transition: all 300ms ease 0s; }
-
-img {
-  max-width: 100%;
-  height: auto; }
-
-figure {
-  margin: 0; }
 
 p {
   margin-bottom: 0px;
@@ -119,12 +107,6 @@ figure {
   .form-submit:hover {
     background: #4292dc; }
 
-.signup-image-link {
-  font-size: 14px;
-  color: #222;
-  display: block;
-  text-align: center; }
-
 .signup-form {
   margin-left: 75px;
   margin-right: 75px;
@@ -194,7 +176,7 @@ input {
     /* box-sizing: border-box; */
     padding: 0 30px; }
 
-  .signup-form, .signup-image {
+  .signup-form{
     width: auto; }
 
   .form-button {
@@ -202,7 +184,6 @@ input {
 
   .form-title {
     text-align: center; } }
-
 </style>
 <body>
 	<div class="main">
@@ -210,7 +191,7 @@ input {
 			<div class="container">
 				<div class="signup-content">
 					<div class="signup-form">
-						<h2 class="form-title">Sign up</h2>
+						<h2 class="form-title">Your Account</h2>
 					
 						<form method=" " action="" class="register-form"
 							id="register-form">
@@ -240,16 +221,9 @@ input {
 						
 							<div class="form-group form-button">
 								<input type="submit" name="signup" id="signup"
-									class="form-submit" value="Register" />
+									class="form-submit" value="Update" />
 							</div>
 						</form>
-					</div>
-					<div class="signup-image">
-						<figure>
-							<img src="signup-image.jpg" alt="sign up image">
-						</figure>
-						<a href="login.jsp" class="signup-image-link">I am already
-							member</a>
 					</div>
 				</div>
 			</div>
