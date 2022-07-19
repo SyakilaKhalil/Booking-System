@@ -55,7 +55,6 @@
 			</div>
 		<div class="col-lg-7 px-5 pt-5"  >
 			<h1 class="font-weight-bold py-3" >Camp Booking</h1>
-			<br>
 			<h4>Sign into your account</h4>
 			<form action="">
 				<div class="form-row">
