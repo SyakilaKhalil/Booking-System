@@ -264,7 +264,7 @@ body {
 .signup-content {
   padding: 75px 0; }
 
-.signup-form, .signup-image, .signin-form, .signin-image {
+.signup-form, .signup-image {
   width: 50%;
   overflow: hidden; }
 
@@ -297,9 +297,6 @@ figure {
   cursor: pointer; }
   .form-submit:hover {
     background: #4292dc; }
-
-#signin {
-  margin-top: 16px; }
 
 .signup-image-link {
   font-size: 14px;
@@ -506,24 +503,6 @@ label.valid {
     -webkit-transform: scale(1.3) translateZ(0);
     transform: scale(1.3) translateZ(0); }
 
-.zmdi-facebook {
-  background: #3b5998; }
-
-.zmdi-twitter {
-  background: #1da0f2; }
-
-.zmdi-google {
-  background: #e72734; }
-
-.signin-form {
-  margin-right: 90px;
-  margin-left: 80px; }
-
-.signin-image {
-  margin-left: 110px;
-  margin-right: 20px;
-  margin-top: 10px; }
-
 @media screen and (max-width: 1200px) {
   .container {
     width: calc( 100% - 30px);
@@ -551,54 +530,16 @@ label.valid {
     /* box-sizing: border-box; */
     padding: 0 30px; }
 
-  .signin-image {
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 50px;
-    order: 2;
-    -moz-order: 2;
-    -webkit-order: 2;
-    -o-order: 2;
-    -ms-order: 2; }
 
-  .signup-form, .signup-image, .signin-form, .signin-image {
+  .signup-form, .signup-image {
     width: auto; }
-
-  .social-login {
-    justify-content: center;
-    -moz-justify-content: center;
-    -webkit-justify-content: center;
-    -o-justify-content: center;
-    -ms-justify-content: center; }
 
   .form-button {
     text-align: center; }
 
-  .signin-form {
-    order: 1;
-    -moz-order: 1;
-    -webkit-order: 1;
-    -o-order: 1;
-    -ms-order: 1;
-    margin-right: 0px;
-    margin-left: 0px;
-    padding: 0 30px; }
-
   .form-title {
     text-align: center; } }
-@media screen and (max-width: 400px) {
-  .social-login {
-    flex-direction: column;
-    -moz-flex-direction: column;
-    -webkit-flex-direction: column;
-    -o-flex-direction: column;
-    -ms-flex-direction: column; }
 
-  .social-label {
-    margin-right: 0px;
-    margin-bottom: 10px; } }
-
-/*# sourceMappingURL=style.css.map */
 
 </style>
 <body>
