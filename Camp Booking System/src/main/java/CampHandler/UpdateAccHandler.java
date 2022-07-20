@@ -64,6 +64,11 @@ public class UpdateAccHandler extends HttpServlet {
 			session.removeAttribute("participant_password");
 			session.removeAttribute("participant_phonenum");
 			
+			session.setAttribute("participant_name",participant_name );
+			session.setAttribute("participant_email", participant_email);
+			session.setAttribute("participant_password",participant_password );
+			session.setAttribute("participant_phonenum",participant_phonenum );
+			
 			response.sendRedirect("Homepage.jsp");
 	}
 	}
