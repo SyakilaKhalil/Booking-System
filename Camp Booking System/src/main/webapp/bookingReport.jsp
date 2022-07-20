@@ -78,6 +78,8 @@
 			<th>Name</th>
 			<th>Contact No</th>
 			<th>No of Pax</th>
+			<th>Tent Type</th>
+			<th>Tent Quantity</th>
 			<th>Campsite Type</th>
 			<th>Check-in Date</th>
 			<th>Check-out Date</th>
@@ -86,7 +88,7 @@
 		
 		<%
             con = DB.getConnection();
-            String sql = "select participant_name, participant_phonenum, no_pax, checkin_date, checkout_date, remarks from campsite join participant using (participant_phonenum)";
+            String sql = "select participant_name, participant_phonenum, no_pax, tent_type, tent_quantity, site_type, checkin_date, checkout_date, remarks from campsite join participant using (participant_phonenum)";
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             while (rs.next()) {
@@ -95,6 +97,12 @@
             	<td><%=rs.getString(1)%></td>
             	<td><%=rs.getString(2)%></td>
             	<td><%=rs.getString(3)%></td>
+            	<td><%=rs.getString(4)%></td>
+            	<td><%=rs.getString(5)%></td>
+            	<td><%=rs.getString(6)%></td>
+            	<td><%=rs.getString(7)%></td>
+            	<td><%=rs.getString(8)%></td>
+            	<td><%=rs.getString(9)%></td>
                 <td><a href="deleteParticipant?phonenum=<%=rs.getString(2)%>">Delete</a></td>
             </tr>
             <%
