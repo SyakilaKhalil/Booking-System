@@ -72,7 +72,7 @@ a {
 </head>
 <body>
 
-<form action="/action_page.php">
+<form action="booking" method="post">
   <div class="container">
     <h1>Booking</h1>
     <p>Please fill in this form to book for a camp slot.</p>
@@ -107,7 +107,7 @@ a {
    
     <hr>
  
-
+	<input type="hidden" name="action" value="bookingCamp">
     <button style="background-color:#b87023;" type="submit" class="registerbtn">Book Now</button>
   </div>
   

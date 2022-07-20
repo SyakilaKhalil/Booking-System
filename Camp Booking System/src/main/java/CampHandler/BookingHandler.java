@@ -60,7 +60,7 @@ public class BookingHandler extends HttpServlet {
 		mem.setCheckout_date(checkout_date);
 		mem.setRemarks(remarks);
 		rd.bookingCamp(mem);
-        response.sendRedirect("BookingSucces.jsp");	
+        response.sendRedirect("Homepage.jsp");	
 		
 	}
 	
