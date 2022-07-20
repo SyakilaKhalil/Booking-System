@@ -192,29 +192,32 @@ input {
 							<div class="form-group">
 								<label for="name"><i
 									class="zmdi zmdi-account material-icons-name"></i></label> <input
-									type="text" name="name" id="name" placeholder="Your Name" />
+									type="text" name="name" id="name" value="${participant_name}"/>
 							</div>
 							<div class="form-group">
 								<label for="email"><i class="zmdi zmdi-email"></i></label> <input
-									type="email" name="email" id="email" placeholder="Your Email" />
+									type="email" name="email" id="email" value="${participant_email}" />
 							</div>
 							<div class="form-group">
 								<label for="pass"><i class="zmdi zmdi-lock"></i></label> <input
-									type="password" name="pass" id="pass" placeholder="Password" />
+									type="password" name="pass" id="pass" value="${participant_password}"
+									onkeyup='check();' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+									title="Must contain at least one number and one uppercase and 
+									lowercase letters, and at least 8 or more characters"/>
 							</div>
 							<div class="form-group">
 								<label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
 								<input type="password" name="re_pass" id="re_pass"
-									placeholder="Re-enter your password" />
+									value="${participant_password}" onkeyup='check();'/>
 							</div>
 							<div class="form-group">
 								<label for="contact"><i class="zmdi zmdi-lock-outline"></i></label>
-								<input type="text" name="contact" id="contact"
+								<input type="text" name="contact" id="contact" value="${participant_phonenum}"
 									placeholder="Contact no" />
 							</div>
 						
 							<div class="form-group form-button">
-								<input type="submit" name="signup" id="signup" class="form-submit" value="Update" />
+								<input type="submit" name="signup" id="signup" class="form-submit AccountUpdate" value="Update" />
 							</div>
 						</form>
 					</div>
@@ -222,5 +225,16 @@ input {
 			</div>
 		</section>
 	</div>
+	<script>
+
+var elems = document.getElementsByClassName('AccountUpdate');
+var confirmIt = function (e) {
+    if (!confirm('Are you sure that the new information you entered is correct?')) e.preventDefault();
+};
+for (var i = 0, l = elems.length; i < l; i++) {
+    elems[i].addEventListener('click', confirmIt, false);
+}
+
+</script>
 </body>
 </html>

@@ -255,7 +255,7 @@ input {
 						<figure>
 							<img src="signup-image.jpg" alt="sign up image">
 						</figure>
-						<a href="login.jsp" class="signup-image-link">I am already
+						<a onclick="window.location.href='index.jsp';" class="signup-image-link">I am already
 							member</a>
 					</div>
 				</div>
