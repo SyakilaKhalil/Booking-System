@@ -32,7 +32,7 @@ public class LoginHandler extends HttpServlet {
         rd = new ParticipantDA();
         // TODO Auto-generated constructor stub
     }
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	String participant_email=request.getParameter("participant_email");
 		String participant_password=request.getParameter("participant_password");
 		RequestDispatcher view=null;
