@@ -154,7 +154,7 @@ figure {
 								<label for="email">E-mail: </label>${participant_email}
 							</div>
 							<div class="form-group">
-								<label for="contact">Phone Number:</label>${participant_contact}
+								<label for="contact">Phone Number:</label>${participant_phonenum}
 							</div>
 							<div class="form-group form-button">
 								<input type="submit" name="signup" id="signup" class="form-submit" value="Update" />
