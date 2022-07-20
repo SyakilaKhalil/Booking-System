@@ -77,7 +77,7 @@
 	<section class="Form my-4 mc-5">
 	<div class="container">
 		<div class="row">
-			<img src="banner.png" alt="Banner" style="width:100%;">
+			<img src="banner.png" alt="Banner" style="width:100%; border-top-left-radius:30px; border-top-right-radius:30px;">
 		<table class= "center">
 		<tr>
 			<th>Booking ID</th>
@@ -90,10 +90,14 @@
 			
 		</tr>	
 		<%
+			String hp =(String)session.getAttribute("participant_phonenum");
+        	session.setAttribute("participant_phonenum",hp);
             con = DB.getConnection();
-            String sql = "select * from tentrent";
+            String sql = "select * from tentrent where participant_phonenum=?";
             ps = con.prepareStatement(sql);
+            ps.setString(1, hp);
             rs = ps.executeQuery();
+           
             while (rs.next()) {
             %>
             <tr>
