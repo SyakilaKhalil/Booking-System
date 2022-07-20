@@ -213,7 +213,7 @@ input {
 						<h2 class="form-title">Sign up</h2>
 					
 						<form  action="participant" class="register-form"
-							id="register-form">
+							id="register-form" method="post">
 							<div class="form-group">
 								<label for="name"><i
 									class="zmdi zmdi-account material-icons-name"></i></label>
@@ -244,7 +244,7 @@ input {
 						
 							<div class="form-group form-button">
 							<input type="hidden" name="action"  value="createParticipant">
-								<input type="submit" name="signup" id="signup"
+								<input type="submit" 
 									class="form-submit" value="Register" />
 							</div>
 						</form>
