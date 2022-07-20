@@ -187,7 +187,7 @@ input {
 					<div class="signup-form">
 						<h2 class="form-title">Your Account</h2>
 					
-						<form method=" " action="Homepage.jsp" class="register-form"
+						<form method="post" action="UpdateAccHandler" class="register-form"
 							id="register-form">
 							<div class="form-group">
 								<label for="name"><i
@@ -217,6 +217,7 @@ input {
 							</div>
 						
 							<div class="form-group form-button">
+							<input type="hidden" name="action" value="updateAcc">
 								<input type="submit" name="signup" id="signup" class="form-submit AccountUpdate" value="Update" />
 							</div>
 						</form>
