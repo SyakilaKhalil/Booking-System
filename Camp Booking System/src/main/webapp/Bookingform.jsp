@@ -79,17 +79,17 @@ a {
     <hr>
 
 	<label>Number Of Pax:</label><br> 
-      <input class="" type = "radio" name = "pax" value = "2" checked />1 - 20 pax
+      <input class="" type = "radio" name = "pax" value = "20" checked />1 - 20 pax
       <Br>
-      <input type = "radio" name = "pax" value = "4">21 - 50 pax
+      <input type = "radio" name = "pax" value = "50">21 - 50 pax
   
     
 	<br><br>
 	<select >
-    <option value="0">Select package:</option>
-    <option  value="158">Double Tent</option>
-    <option  value="238">Quad Tent</option>
-    <option  value="408">Deluxe 8 Tent</option></select>
+    <option value="0">Select Campsite:</option>
+    <option  value="1">Forest Camsite</option>
+    <option  value="2">Lake Campsite</option>
+    <option  value="3">Foothill Campsite</option></select>
 	<br><br>
 	 <label>Check-in:
     <input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}">
@@ -108,7 +108,7 @@ a {
     <hr>
  
 
-    <button style="background-color:#b87023;" type="submit" class="registerbtn">Register</button>
+    <button style="background-color:#b87023;" type="submit" class="registerbtn">Book Now</button>
   </div>
   
 
