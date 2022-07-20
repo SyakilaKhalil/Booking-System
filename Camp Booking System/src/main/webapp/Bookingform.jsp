@@ -79,30 +79,30 @@ a {
     <hr>
 
 	<label>Number Of Pax:</label><br> 
-      <input class="" type = "radio" name = "pax" value = "20" checked />1 - 20 pax
+      <input class="" type = "radio" name = "no_pax" value = "1-20" checked />1 - 20 pax
       <Br>
-      <input type = "radio" name = "pax" value = "50">21 - 50 pax
+      <input type = "radio" name = "no_pax" value = "21-50">21 - 50 pax
   
     
 	<br><br>
-	<select name="">
+	<select name="site_type">
     <option value="0">Select Campsite:</option>
-    <option  value="1">Forest Camsite</option>
-    <option  value="2">Lake Campsite</option>
-    <option  value="3">Foothill Campsite</option></select>
+    <option  value="Forest Camsite">Forest Camsite</option>
+    <option  value="Lake Campsite">Lake Campsite</option>
+    <option  value="Foothill Campsite">Foothill Campsite</option></select>
 	<br><br>
 	 <label>Check-in:
-    <input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}">
+    <input type="date" name="checkin_date" required pattern="\d{4}-\d{2}-\d{2}">
     <span class="validity"></span>
   </label>
   <br><br>
   	 <label>Check-out:
-    <input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}">
+    <input type="date" name="checkout_date" required pattern="\d{4}-\d{2}-\d{2}">
     <span class="validity"></span>
   </label>
   <br><br>
     <label for="remark"><b>Remarks</b></label>
-    <input type="text" placeholder="Additional remarks" name="remark" id="remark">
+    <input type="text" placeholder="Additional remarks" name="remarks" id="remark">
 
    
     <hr>
