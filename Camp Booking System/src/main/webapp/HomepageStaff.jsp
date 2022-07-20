@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-    <% if(session.getAttribute("participant_email")==null)
-	response.sendRedirect("index.jsp");
+    <% if(session.getAttribute("staff_email")==null)
+	response.sendRedirect("LoginStaff.jsp");
 %>
 
 <!DOCTYPE html>
