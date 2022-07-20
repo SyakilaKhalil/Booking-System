@@ -56,8 +56,8 @@ public class ParticipantDA {
 	             PreparedStatement preparedStatement = con.prepareStatement("Select * from participant where participant_email=? and participant_password=?"))
 	        {
 	    
-	            preparedStatement.setString(2, mem.getParticipant_email());
-	            preparedStatement.setString(3, mem.getParticipant_password());
+	            preparedStatement.setString(1, mem.getParticipant_email());
+	            preparedStatement.setString(2, mem.getParticipant_password());
 
 	            preparedStatement.executeUpdate();
 	        } catch (SQLException e) {

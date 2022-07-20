@@ -67,7 +67,7 @@
 			<form action="login" method="post">
 				<div class="form-row">
 					<div class="col-lg-7">
-						<input type="email" placeholder="Email-Address" class="form-control mt-5 my-3 p-4" name="participant_name">
+						<input type="email" placeholder="Email-Address" class="form-control mt-5 my-3 p-4" name="participant_email">
 					</div>
 				</div>
 				<div class="form-row">
@@ -78,7 +78,7 @@
 				<div class="form-row">
 					<div class="col-lg-7">
 						<input type="hidden" name="action" value="participantLogin">
-						<button type="button" class="btn1 mt-3 mb-5">Login</button>
+						<input type="submit" class="btn1 mt-3 mb-5" value="LOGIN">
 					</div>
 				</div>
 				<a href="#">Forgot password</a>
