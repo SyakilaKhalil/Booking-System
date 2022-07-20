@@ -52,7 +52,6 @@ public class deleteParticipant extends HttpServlet {
 	            e.printStackTrace();
 	        }
 	    }
-	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
