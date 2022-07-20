@@ -59,9 +59,31 @@ public class ParticipantDA {
 	            preparedStatement.setString(1, mem.getParticipant_email());
 	            preparedStatement.setString(2, mem.getParticipant_password());
 
-	            preparedStatement.executeUpdate();
+	            preparedStatement.executeQuery();
 	        } catch (SQLException e) {
 	            e.printStackTrace();
 	        }
 	}
+	public static Participant getInfoByEmail(String participant_email, String participant_password) throws SQLException {
+		Participant  i=new Participant ();
+		try (Connection con = getConnection();
+	             PreparedStatement preparedStatement = con.prepareStatement("Select * from participant where participant_email=? and participant_password=?")){
+			preparedStatement.setString(1,participant_email);
+			preparedStatement.setString(1,participant_password);
+			rs = ps.executeQuery();
+			if(rs.next()) {
+				i.setParticipant_email(rs.getString("participant_email"));
+				i.setParticipant_name(rs.getString("participant_password"));		
+			}
+			
+			con.close();
+			
+		}catch (Exception e) {
+	          e.printStackTrace();
+	    }
+		
+		return i;
+			
+		}
+	
 }

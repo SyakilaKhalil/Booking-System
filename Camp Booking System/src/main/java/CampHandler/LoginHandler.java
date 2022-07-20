@@ -3,14 +3,16 @@ package CampHandler;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 import CampDA.ParticipantDA;
-import CampJavabean.Participant;
+
 
 /**
  * Servlet implementation class LoginHandler
@@ -31,10 +33,20 @@ public class LoginHandler extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-  		// TODO Auto-generated method stub
+    	String participant_email=request.getParameter("participant_email");
+		String participant_password=request.getParameter("participant_password");
+		try {
+			request.setAttribute("i", ParticipantDA.getInfoByEmail(participant_email,participant_password));
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		RequestDispatcher view = request.getRequestDispatcher("viewIndex.jsp");
+		view.forward(request, response); 
   	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    
+	/*protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		String action = request.getParameter("action");
 		try {
@@ -61,7 +73,7 @@ public class LoginHandler extends HttpServlet {
 		rd.participantLogin(mem);
         response.sendRedirect("Homepage.jsp");
 		
-	}
+	}*/
 	
 
 
