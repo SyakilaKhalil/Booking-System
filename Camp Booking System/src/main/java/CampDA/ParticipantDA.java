@@ -64,7 +64,7 @@ public class ParticipantDA {
 	            e.printStackTrace();
 	        }
 	}
-	public static Participant getInfoByEmail(String participant_email, String participant_password) throws SQLException {
+	/*public static Participant getInfoByEmail(String participant_email, String participant_password) throws SQLException {
 		Participant  i=new Participant ();
 		try (Connection con = getConnection();
 	             PreparedStatement preparedStatement = con.prepareStatement("Select * from participant where participant_email=? and participant_password=?")){
@@ -84,6 +84,6 @@ public class ParticipantDA {
 		
 		return i;
 			
-		}
+		}*/
 	
 }

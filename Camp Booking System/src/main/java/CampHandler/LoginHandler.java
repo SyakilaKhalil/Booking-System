@@ -1,7 +1,10 @@
 package CampHandler;
 
 import java.io.IOException;
-import java.sql.SQLException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,9 +12,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-
-import CampDA.ParticipantDA;
 
 
 /**
@@ -20,34 +22,62 @@ import CampDA.ParticipantDA;
 @WebServlet("/login")
 public class LoginHandler extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private ParticipantDA rd;  
-    public void init(){
-		rd = new ParticipantDA();
-	}  
     /**
      * @see HttpServlet#HttpServlet()
      */
     public LoginHandler() {
         super();
-        rd = new ParticipantDA();
-        // TODO Auto-generated constructor stub
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	String participant_email=request.getParameter("participant_email");
-		String participant_password=request.getParameter("participant_password");
-		RequestDispatcher view=null;
-		try {
-			request.setAttribute("i", ParticipantDA.getInfoByEmail(participant_email,participant_password));
-			 view = request.getRequestDispatcher("Homepage.jsp");
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			 view = request.getRequestDispatcher("index.jsp");
-			e.printStackTrace();
-		}
-		//RequestDispatcher view = request.getRequestDispatcher("viewIndex.jsp");
-		view.forward(request, response); 
-  	}
+    	String participant_email=request.getParameter("participant_name");
+    	String participant_password=request.getParameter("participant_password");
 
+		//Create session
+		HttpSession session = request.getSession();
+		
+		//request dispatcher
+		RequestDispatcher dispatcher = null;
+    	String dbURL = "jdbc:postgresql://ec2-34-239-241-121.compute-1.amazonaws.com/dfogu31uq8h3mb";
+    	String user = "kiljgbsypcqcne";
+    	String pass = "da31ec8fde345a6ed0bc0724f57aa469269b1a98b68fa054da0d20f7b7894763";
+    	
+    	try {
+			Class.forName("org.postgresql.Driver");
+			Connection connection = DriverManager.getConnection(dbURL,user,pass);
+			
+			//SQL Statement/Query 
+			PreparedStatement pst = connection.prepareStatement("select * from participant where participant_email=? and participant_password = ? ");
+			
+			// Set string - set for ? by order
+			pst.setString(1, participant_email);
+			pst.setString(2, participant_password);
+			
+			// Execute Query Method
+			ResultSet result = pst.executeQuery();
+			if(result.next()) {
+				
+				session.setAttribute("participant_name", result.getString("participant_name"));
+				session.setAttribute("participant_email", result.getString("participant_email"));
+				session.setAttribute("participant_password", result.getString("participant_password"));
+				session.setAttribute("participant_phonenum", result.getString("participant_phonenum"));
+				dispatcher = request.getRequestDispatcher("Homepage.jsp");
+			}
+		else {
+			request.setAttribute("status", "failed");
+			dispatcher = request.getRequestDispatcher("index.jsp");
+		}
+		
+		dispatcher.forward(request, response);
+		
+		{
+			
+		}
+	} catch(Exception e) {
+		e.printStackTrace();
+	}
+    	
+  	}
+}
     
 	/*protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
@@ -80,4 +110,4 @@ public class LoginHandler extends HttpServlet {
 	
 
 
-}
+

@@ -38,13 +38,11 @@ public class BookingDA {
         try (Connection con = getConnection();
              PreparedStatement preparedStatement = con.prepareStatement("insert into campsite(no_pax,site_type,checkin_date,checkout_date,remarks)values(?,?,?,?,?) "))
         {
-    
             preparedStatement.setInt(1, mem.getNo_pax());
             preparedStatement.setString(2, mem.getSite_type());
             preparedStatement.setDate(3,(Date) mem.getCheckin_date());
             preparedStatement.setDate(4, (Date) mem.getCheckout_date());
             preparedStatement.setString(5, mem.getRemarks());
-
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
