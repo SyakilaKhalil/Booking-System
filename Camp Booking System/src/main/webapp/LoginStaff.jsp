@@ -81,8 +81,7 @@
 						<input type="submit" class="btn1 mt-3 mb-5" value="LOGIN">
 					</div>
 				</div>
-				<a href="#" onclick="window.location.href='Admin.jsp';">Admin Login</a>
-				<p>Don't have account?<a onclick="window.location.href='CreateAcc.jsp';" href="#">Register here</a></p>
+				<a href="#" onclick="window.location.href='HomepageStaff.jsp';">Admin Login</a>
 			</form>
 		</div>
 		</div>

@@ -77,7 +77,7 @@
 		
 	}
 	</style>
-<title>Home page</title>
+<title>Home page staff</title>
 </head>
 <body>
 <div class="container-fluid banner">
@@ -89,13 +89,10 @@
 				</div>
 				<ul class="nav">
 					<li class="nav-item">
-						<a class="nav-link" onclick="window.location.href='Homepage.jsp';">HOME</a>
+						<a class="nav-link" onclick="window.location.href='HomepageStaff.jsp';" >HOME</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" onclick="window.location.href='ViewAcc.jsp';">ACCOUNT</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" onclick="window.location.href='';">BOOKING HISTORY</a>
+						<a class="nav-link" onclick="window.location.href='ViewAccStaff.jsp';">ACCOUNT</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" onclick="window.location.href='index.jsp';">LOGOUT</a>
@@ -104,11 +101,11 @@
 			</nav>
 		</div>
 		<div class="col-md-8 offset-md-2 info">
-			<h1 class="text-center mb-">BOOKING FORM</h1>
+			<h1 class="text-center mb-">BOOKING REPORT</h1>
 			<p class="text-center ">
 				Campgrounds await your exploration and discovery throughout Malaysia. 
 			</p>
-			<a onclick="window.location.href='Bookingform.jsp';" class="btn btn-md text-center mt-5">GET STARTTED</a>
+			<a onclick="window.location.href='Bookingform.jsp';" class="btn btn-md text-center mt-5">VIEW REPORT</a>
 		
 		</div>
 	</div>
@@ -117,4 +114,4 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
-</html>
+</html>>
