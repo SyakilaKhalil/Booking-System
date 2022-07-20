@@ -93,7 +93,7 @@
 			String hp =(String)session.getAttribute("participant_phonenum");
         	session.setAttribute("participant_phonenum",hp);
             con = DB.getConnection();
-            String sql = "select * from tentrent where participant_phonenum=?";
+            String sql = "select * from tentrent";
             ps = con.prepareStatement(sql);
             ps.setString(1, hp);
             rs = ps.executeQuery();
