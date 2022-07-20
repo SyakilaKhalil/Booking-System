@@ -54,7 +54,7 @@
 	</style>
 </head>
 <body>
-	
+	<input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
 	<section class="Form my-4 mc-5">
 	<div class="container">
 		<div class="row">
