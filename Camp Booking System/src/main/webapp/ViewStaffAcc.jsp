@@ -86,7 +86,7 @@
             %>
 			<tr>
             	<td><%=rs.getString(1)%></td>
-            	<td><%=rs.getTimestamp(2)%></td>
+            	<td><%=rs.getString(2)%></td>
             	<td><%=rs.getString(4)%></td>
                 <td><a href="deleteParticipant?phonenum=<%=rs.getString(4)%>">Delete</a></td>
             </tr>
