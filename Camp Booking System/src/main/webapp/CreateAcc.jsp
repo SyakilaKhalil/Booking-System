@@ -229,7 +229,9 @@ input {
 								<label for="pass"><i class="zmdi zmdi-lock"></i></label> 
 								<input
 									type="password" name="participant_password" id="pass" placeholder="Password" 
-									onkeyup='check();' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+									onkeyup='check();' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+									title="Must contain at least one number and one uppercase and 
+									lowercase letters, and at least 8 or more characters"/>
 							</div>
 							<div class="form-group">
 								<label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
