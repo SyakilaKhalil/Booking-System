@@ -90,9 +90,9 @@ public class ParticipantDA {
 		try (Connection connection= getConnection();
 				PreparedStatement statement =connection.prepareStatement("update participant set participant_name=?,participant_password=?, participant_phonenum=? where participant_email=?");){
 					statement.setString(1, par.getParticipant_name());
-		            statement.setString(2, par.getParticipant_email());
-		            statement.setString(3, par.getParticipant_password());
-		            statement.setString(4, par.getParticipant_phonenum());
+		            statement.setString(4, par.getParticipant_email());
+		            statement.setString(2, par.getParticipant_password());
+		            statement.setString(3, par.getParticipant_phonenum());
 		         
 		            
 		            rowUpdated=statement.executeUpdate()>0;
