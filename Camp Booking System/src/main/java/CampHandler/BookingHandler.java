@@ -48,7 +48,7 @@ public class BookingHandler extends HttpServlet {
 	}
 	private void bookingCamp(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException{
-			int no_pax= Integer.parseInt(request.getParameter("no_pax"));
+			String no_pax= request.getParameter("no_pax");
 			String site_type=request.getParameter("site_type");
 			Date checkin_date=Date.valueOf("checkin_date");
 			Date checkout_date=Date.valueOf("checkout_date");

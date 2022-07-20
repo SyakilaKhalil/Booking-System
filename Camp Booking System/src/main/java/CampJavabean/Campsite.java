@@ -2,14 +2,14 @@ package CampJavabean;
 import java.util.Date;
 
 public class Campsite {
-int no_pax;
+String no_pax;
 String site_type;
 Date checkin_date;
 Date checkout_date;
 String remarks;
 
 
-public Campsite(int no_pax, String site_type, Date checkin_date, Date checkout_date, String remarks) {
+public Campsite(String no_pax, String site_type, Date checkin_date, Date checkout_date, String remarks) {
 	super();
 	this.no_pax = no_pax;
 	this.site_type = site_type;
@@ -20,10 +20,10 @@ public Campsite(int no_pax, String site_type, Date checkin_date, Date checkout_d
 public Campsite() {
 	// TODO Auto-generated constructor stub
 }
-public int getNo_pax() {
+public String getNo_pax() {
 	return no_pax;
 }
-public void setNo_pax(int no_pax) {
+public void setNo_pax(String no_pax) {
 	this.no_pax = no_pax;
 }
 public String getSite_type() {
