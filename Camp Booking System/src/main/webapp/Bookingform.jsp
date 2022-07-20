@@ -119,8 +119,7 @@ a {
 
    
     <hr>
- 
-	<input type="hidden" name="action" value="bookingCamp">
+ 	<input type="hidden" name="action" value="bookingCamp">
     <button style="background-color:#b87023;" type="submit" class="registerbtn">Book Now</button>
   </div>
   
