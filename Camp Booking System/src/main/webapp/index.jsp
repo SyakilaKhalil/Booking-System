@@ -64,7 +64,7 @@
 		<div class="col-lg-7 px-5 pt-5"  >
 			<h1 class="font-weight-bold py-3" >Camp Booking</h1>
 			<h4>Sign into your account</h4>
-			<form action="login" method="post">
+			<form action="login">
 				<div class="form-row">
 					<div class="col-lg-7">
 						<input type="email" placeholder="Email-Address" class="form-control mt-5 my-3 p-4" name="participant_email">

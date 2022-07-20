@@ -35,13 +35,16 @@ public class LoginHandler extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	String participant_email=request.getParameter("participant_email");
 		String participant_password=request.getParameter("participant_password");
+		RequestDispatcher view=null;
 		try {
 			request.setAttribute("i", ParticipantDA.getInfoByEmail(participant_email,participant_password));
+			 view = request.getRequestDispatcher("Homepage.jsp");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
+			 view = request.getRequestDispatcher("index.jsp");
 			e.printStackTrace();
 		}
-		RequestDispatcher view = request.getRequestDispatcher("viewIndex.jsp");
+		//RequestDispatcher view = request.getRequestDispatcher("viewIndex.jsp");
 		view.forward(request, response); 
   	}
 
