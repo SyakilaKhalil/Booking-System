@@ -95,7 +95,7 @@
 						<a class="nav-link" onclick="window.location.href='ViewAccStaff.jsp';">ACCOUNT</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" onclick="window.location.href='index.jsp';">LOGOUT</a>
+						<a class="nav-link" onclick="window.location.href='LoginStaff.jsp';">LOGOUT</a>
 					</li>
 				</ul>
 			</nav>

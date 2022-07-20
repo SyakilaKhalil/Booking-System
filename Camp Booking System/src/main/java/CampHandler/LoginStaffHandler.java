@@ -45,7 +45,7 @@ public class LoginStaffHandler extends HttpServlet {
 		String staff_email=request.getParameter("staff_email");
     	String staff_password=request.getParameter("staff_password");
     	
-HttpSession session = request.getSession();
+    	HttpSession session = request.getSession();
 		
 		//request dispatcher
 		RequestDispatcher dispatcher = null;
