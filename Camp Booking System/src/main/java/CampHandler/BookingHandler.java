@@ -50,8 +50,8 @@ public class BookingHandler extends HttpServlet {
 			throws SQLException, IOException{
 			String no_pax= request.getParameter("no_pax");
 			String site_type=request.getParameter("site_type");
-			Date checkin_date=Date.valueOf("checkin_date");
-			Date checkout_date=Date.valueOf("checkout_date");
+			String checkin_date=request.getParameter("checkin_date");
+			String checkout_date=request.getParameter("checkout_date");
 			String remarks=request.getParameter("remarks");
 		Campsite mem = new Campsite();
 		mem.setNo_pax(no_pax);

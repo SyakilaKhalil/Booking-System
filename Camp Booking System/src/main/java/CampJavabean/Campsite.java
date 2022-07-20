@@ -1,15 +1,15 @@
 package CampJavabean;
-import java.util.Date;
+
 
 public class Campsite {
 String no_pax;
 String site_type;
-Date checkin_date;
-Date checkout_date;
+String checkin_date;
+String checkout_date;
 String remarks;
 
 
-public Campsite(String no_pax, String site_type, Date checkin_date, Date checkout_date, String remarks) {
+public Campsite(String no_pax, String site_type, String checkin_date,String checkout_date, String remarks) {
 	super();
 	this.no_pax = no_pax;
 	this.site_type = site_type;
@@ -32,16 +32,16 @@ public String getSite_type() {
 public void setSite_type(String site_type) {
 	this.site_type = site_type;
 }
-public Date getCheckin_date() {
+public String getCheckin_date() {
 	return checkin_date;
 }
-public void setCheckin_date(Date checkin_date) {
+public void setCheckin_date(String checkin_date) {
 	this.checkin_date = checkin_date;
 }
-public Date getCheckout_date() {
+public String getCheckout_date() {
 	return checkout_date;
 }
-public void setCheckout_date(Date checkout_date) {
+public void setCheckout_date(String checkout_date) {
 	this.checkout_date = checkout_date;
 }
 public String getRemarks() {

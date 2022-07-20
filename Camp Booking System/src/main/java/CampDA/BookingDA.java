@@ -40,8 +40,8 @@ public class BookingDA {
         {
             preparedStatement.setString(5, mem.getNo_pax());
             preparedStatement.setString(1, mem.getSite_type());
-            preparedStatement.setDate(2,(Date) mem.getCheckin_date());
-            preparedStatement.setDate(3, (Date) mem.getCheckout_date());
+            preparedStatement.setString(2,mem.getCheckin_date());
+            preparedStatement.setString(3,mem.getCheckout_date());
             preparedStatement.setString(4, mem.getRemarks());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
