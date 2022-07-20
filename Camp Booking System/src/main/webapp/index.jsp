@@ -77,7 +77,7 @@
 				</div>
 				<div class="form-row">
 					<div class="col-lg-7">
-						<input type="hidden" name="action" value="participantLogin">
+						
 						<input type="submit" class="btn1 mt-3 mb-5" value="LOGIN">
 					</div>
 				</div>
