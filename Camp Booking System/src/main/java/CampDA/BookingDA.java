@@ -36,13 +36,15 @@ public class BookingDA {
 
         // try-with-resource statement will auto close the connection.
         try (Connection con = getConnection();
-             PreparedStatement preparedStatement = con.prepareStatement("insert into campsite(site_type,remarks,no_pax,checkin_date,checkout_date)values(?,?,?,?,?) "))
+             PreparedStatement preparedStatement = con.prepareStatement("insert into tentrent(site_type,remarks,no_pax,checkin_date,checkout_date,tent_type,tent_quantity)values(?,?,?,?,?,?,?) "))
         {
             preparedStatement.setString(1, mem.getSite_type());
             preparedStatement.setString(2, mem.getRemarks());
             preparedStatement.setString(3, mem.getNo_pax());
             preparedStatement.setString(4, mem.getCheckin_date());
             preparedStatement.setString(5, mem.getCheckout_date());
+            preparedStatement.setString(6, mem.getTent_type());
+            preparedStatement.setString(7, mem.getTent_quantity());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

@@ -53,12 +53,16 @@ public class BookingHandler extends HttpServlet {
 			String checkin_date=request.getParameter("checkin_date");
 			String checkout_date=request.getParameter("checkout_date");
 			String remarks=request.getParameter("remarks");
+			String tent_type=request.getParameter("tent_type");
+			String tent_quantity=request.getParameter("tent_quantity");
 		Campsite mem = new Campsite();
 		mem.setNo_pax(no_pax);
 		mem.setSite_type(site_type);
 		mem.setCheckin_date(checkin_date);
 		mem.setCheckout_date(checkout_date);
 		mem.setRemarks(remarks);
+		mem.setSite_type(tent_type);
+		mem.setTent_quantity(tent_quantity);
 		rd.bookingCamp(mem);
         response.sendRedirect("Homepage.jsp");	
 		

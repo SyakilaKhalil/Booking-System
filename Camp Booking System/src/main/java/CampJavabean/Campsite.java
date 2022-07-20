@@ -7,6 +7,9 @@ String site_type;
 String checkin_date;
 String checkout_date;
 String remarks;
+String tent_type;
+String tent_quantity;
+
 
 
 public Campsite(String no_pax, String site_type, String checkin_date,String checkout_date, String remarks) {
@@ -50,7 +53,18 @@ public String getRemarks() {
 public void setRemarks(String remarks) {
 	this.remarks = remarks;
 }
-
+public String getTent_type() {
+	return tent_type;
+}
+public void setTent_type(String tent_type) {
+	this.tent_type = tent_type;
+}
+public String getTent_quantity() {
+	return tent_quantity;
+}
+public void setTent_quantity(String tent_quantity) {
+	this.tent_quantity = tent_quantity;
+}
 
 
 

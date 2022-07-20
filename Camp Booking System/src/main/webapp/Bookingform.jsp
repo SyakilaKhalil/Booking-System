@@ -91,6 +91,14 @@ a {
     <option  value="Lake Campsite">Lake Campsite</option>
     <option  value="Foothill Campsite">Foothill Campsite</option></select>
 	<br><br>
+	<select name="tent_type">
+    <option value="0">Select Tent Type:</option>
+    <option  value="Inflatable Tent">Inflatable Tent</option>
+    <option  value="Cabin Tent">Cabin Tent</option>
+    <option  value="Bell Tent">Bell Tent</option></select><br><br>
+    <label>Tent Quantity
+    <input type="number" name="tent_quantity" required></label>
+    <br><br>
 	 <label>Check-in:
     <input type="date" name="checkin_date" required pattern="\d{4}-\d{2}-\d{2}">
     <span class="validity"></span>
