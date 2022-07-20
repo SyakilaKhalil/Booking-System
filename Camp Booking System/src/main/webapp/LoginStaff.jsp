@@ -64,15 +64,15 @@
 		<div class="col-lg-7 px-5 pt-5"  >
 			<h1 class="font-weight-bold py-3" >Camp Booking</h1>
 			<h4>Sign into your account</h4>
-			<form action="login" method="post">
+			<form action="LoginStaffHandler" method="post">
 				<div class="form-row">
 					<div class="col-lg-7">
-						<input type="email" placeholder="Email-Address" class="form-control mt-5 my-3 p-4" name="participant_email">
+						<input type="email" placeholder="Email-Address" class="form-control mt-5 my-3 p-4" name="staff_email">
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="col-lg-7">
-						<input type="password" placeholder="********" class="form-control my-3 p-4" name="participant_password">
+						<input type="password" placeholder="********" class="form-control my-3 p-4" name="staff_password">
 					</div>
 				</div>
 				<div class="form-row">
@@ -81,7 +81,8 @@
 						<input type="submit" class="btn1 mt-3 mb-5" value="LOGIN">
 					</div>
 				</div>
-				<a href="#" onclick="window.location.href='HomepageStaff.jsp';">Admin Login</a>
+				
+				<a href="#" onclick="window.location.href='index.jsp';">Member Login</a>
 			</form>
 		</div>
 		</div>
