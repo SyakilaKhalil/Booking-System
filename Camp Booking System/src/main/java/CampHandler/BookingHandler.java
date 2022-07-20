@@ -57,7 +57,7 @@ public class BookingHandler extends HttpServlet {
 			String remarks=request.getParameter("remarks");
 			String tent_type=request.getParameter("tent_type");
 			String tent_quantity=request.getParameter("tent_quantity");
-			String participant_phonenum=(String)session.getAttribute("participant_phonenum");
+			String participant_phonenum=(String)session.getAttribute("participant_email");
 		Campsite mem = new Campsite();
 		mem.setNo_pax(no_pax);
 		mem.setSite_type(site_type);

@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
+    <% if(session.getAttribute("participant_email")==null)
+	response.sendRedirect("index.jsp");
+%>
+    
  <%@page import="CampDA.DB"%>
 <%@page import="java.io.*"%>
 <%@page import="java.sql.ResultSet"%>

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
-    <% if(session.getAttribute("participant_phonenum")==null)
+    <% if(session.getAttribute("participant_email")==null)
 	response.sendRedirect("index.jsp");
 %>
 
@@ -119,6 +119,7 @@ a {
 
    
     <hr>
+    
  	<input type="hidden" name="action" value="bookingCamp">
     <button style="background-color:#b87023;" type="submit" class="registerbtn">Book Now</button>
   </div>
