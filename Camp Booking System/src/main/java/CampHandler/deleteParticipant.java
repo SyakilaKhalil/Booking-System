@@ -36,12 +36,12 @@ public class deleteParticipant extends HttpServlet {
 		String dbURL = "jdbc:postgresql://ec2-34-239-241-121.compute-1.amazonaws.com/dfogu31uq8h3mb";
     	String user = "kiljgbsypcqcne";
     	String pass = "da31ec8fde345a6ed0bc0724f57aa469269b1a98b68fa054da0d20f7b7894763";
-	     String phonenum= request.getParameter("phonenum");
+	    String phonenum= request.getParameter("phonenum");
 	     
 	     try {
 	            Class.forName("org.postgresql.Driver");
 	            Connection connection = DriverManager.getConnection(dbURL,user,pass);
-	            ps = connection.prepareStatement("DELETE FROM participant where phonenum=?");
+	            ps = connection.prepareStatement("DELETE FROM participant where participant_phonenum=?");
 	            ps.setString(1, phonenum);
 
 	            ps.executeUpdate();
