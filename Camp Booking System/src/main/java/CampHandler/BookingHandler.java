@@ -1,7 +1,6 @@
 package CampHandler;
 
 import java.io.IOException;
-import java.sql.Date;
 import java.sql.SQLException;
 
 import javax.servlet.ServletException;
@@ -9,6 +8,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import CampDA.BookingDA;
 import CampJavabean.Campsite;
 
@@ -48,6 +49,7 @@ public class BookingHandler extends HttpServlet {
 	}
 	private void bookingCamp(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException{
+			HttpSession session=request.getSession(false);
 			String no_pax= request.getParameter("no_pax");
 			String site_type=request.getParameter("site_type");
 			String checkin_date=request.getParameter("checkin_date");
@@ -55,6 +57,7 @@ public class BookingHandler extends HttpServlet {
 			String remarks=request.getParameter("remarks");
 			String tent_type=request.getParameter("tent_type");
 			String tent_quantity=request.getParameter("tent_quantity");
+			String participant_phonenum=(String)session.getAttribute("id");
 		Campsite mem = new Campsite();
 		mem.setNo_pax(no_pax);
 		mem.setSite_type(site_type);
@@ -63,6 +66,7 @@ public class BookingHandler extends HttpServlet {
 		mem.setRemarks(remarks);
 		mem.setSite_type(tent_type);
 		mem.setTent_quantity(tent_quantity);
+		mem.setParticipant_phonenum(participant_phonenum);
 		rd.bookingCamp(mem);
         response.sendRedirect("Homepage.jsp");	
 		
