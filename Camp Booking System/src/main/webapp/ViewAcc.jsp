@@ -148,13 +148,13 @@ figure {
 							id="register-form">
 							 <input type=hidden name="participant_phonenum"  value="${participant_phonenum}" >
 							<div class="form-group">
-								<label for="name">Name:</label>${participant_name}
+								<label for="name">Name: </label>${participant_name}
 							</div>
 							<div class="form-group">
 								<label for="email">E-mail: </label>${participant_email}
 							</div>
 							<div class="form-group">
-								<label for="contact">Phone Number:</label>${participant_phonenum}
+								<label for="contact">Phone Number: </label>${participant_phonenum}
 							</div>
 							<div class="form-group form-button">
 								<input type="submit" name="signup" id="signup" class="form-submit" value="Update" />
