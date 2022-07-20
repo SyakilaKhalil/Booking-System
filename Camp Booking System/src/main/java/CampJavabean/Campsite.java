@@ -17,6 +17,9 @@ public Campsite(int no_pax, String site_type, Date checkin_date, Date checkout_d
 	this.checkout_date = checkout_date;
 	this.remarks = remarks;
 }
+public Campsite() {
+	// TODO Auto-generated constructor stub
+}
 public int getNo_pax() {
 	return no_pax;
 }

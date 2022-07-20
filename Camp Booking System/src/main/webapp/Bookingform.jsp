@@ -85,7 +85,7 @@ a {
   
     
 	<br><br>
-	<select >
+	<select name="">
     <option value="0">Select Campsite:</option>
     <option  value="1">Forest Camsite</option>
     <option  value="2">Lake Campsite</option>
