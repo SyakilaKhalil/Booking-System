@@ -77,6 +77,7 @@
 				</div>
 				<div class="form-row">
 					<div class="col-lg-7">
+						<input type="hidden" name="action" value="participantLogin">
 						<button type="button" class="btn1 mt-3 mb-5">Login</button>
 					</div>
 				</div>
