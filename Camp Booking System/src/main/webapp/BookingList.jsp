@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+ <%@page import="CampDA.DB"%>
+<%@page import="java.io.*"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,6 +67,12 @@
 	</style>
 </head>
 <body>
+
+ <%!
+            Connection con = null;
+            PreparedStatement ps = null;
+            ResultSet rs = null;
+        %>
 	<h1>BOOKING DETAILS</h1>
 	<section class="Form my-4 mc-5">
 	<div class="container">
