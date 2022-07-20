@@ -85,17 +85,17 @@ a {
   
     
 	<br><br>
-	<select name="site_type">
-    <option value="0">Select Campsite:</option>
+	<label>Choose Campsite:
+	<select name="site_type" required>
     <option  value="Forest Camsite">Forest Camsite</option>
     <option  value="Lake Campsite">Lake Campsite</option>
-    <option  value="Foothill Campsite">Foothill Campsite</option></select>
+    <option  value="Foothill Campsite">Foothill Campsite</option></select></label>
 	<br><br>
-	<select name="tent_type">
-    <option value="0">Select Tent Type:</option>
+	<label>Select Tent Type:
+	<select name="tent_type" required>
     <option  value="Inflatable Tent">Inflatable Tent</option>
     <option  value="Cabin Tent">Cabin Tent</option>
-    <option  value="Bell Tent">Bell Tent</option></select><br><br>
+    <option  value="Bell Tent">Bell Tent</option></select></label><br><br>
     <label>Tent Quantity
     <input type="number" name="tent_quantity" required></label>
     <br><br>
