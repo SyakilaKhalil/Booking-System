@@ -192,15 +192,15 @@ input {
 							<div class="form-group">
 								<label for="name"><i
 									class="zmdi zmdi-account material-icons-name"></i></label> <input
-									type="text" name="name" id="name" value="${participant_name}"/>
+									type="text" name="participant_name" id="name" value="${participant_name}"/>
 							</div>
 							<div class="form-group">
 								<label for="email"><i class="zmdi zmdi-email"></i></label> <input
-									type="email" name="email" id="email" value="${participant_email}" />
+									type="email" name="participant_email" id="email" value="${participant_email}" />
 							</div>
 							<div class="form-group">
 								<label for="pass"><i class="zmdi zmdi-lock"></i></label> <input
-									type="password" name="pass" id="pass" value="${participant_password}"
+									type="password" name="participant_password" id="pass" value="${participant_password}"
 									onkeyup='check();' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
 									title="Must contain at least one number and one uppercase and 
 									lowercase letters, and at least 8 or more characters"/>
@@ -212,7 +212,7 @@ input {
 							</div>
 							<div class="form-group">
 								<label for="contact"><i class="zmdi zmdi-lock-outline"></i></label>
-								<input type="text" name="contact" id="contact" value="${participant_phonenum}"
+								<input type="text" name="participant_phonenum" id="contact" value="${participant_phonenum}"
 									placeholder="Contact no" />
 							</div>
 						
