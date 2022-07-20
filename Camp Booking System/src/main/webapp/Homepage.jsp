@@ -95,7 +95,7 @@
 						<a class="nav-link" onclick="window.location.href='ViewAcc.jsp';">ACCOUNT</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" onclick="window.location.href='';">BOOKING HISTORY</a>
+						<a class="nav-link" onclick="window.location.href='BookingList.jsp';">BOOKING HISTORY</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" onclick="window.location.href='index.jsp';">LOGOUT</a>
