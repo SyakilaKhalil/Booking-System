@@ -144,7 +144,7 @@ figure {
 				<div class="view-account">
 					<div class="signup-form">
 						<h2 class="form-title">Your Account</h2>
-						<form method="post" action="UpdateAcc" class="register-form"
+						<form method="post" action="UpdateAcc.jsp" class="register-form"
 							id="register-form">
 							 <input type=hidden name="participant_phonenum"  value="${participant_phonenum}" >
 							<div class="form-group">
