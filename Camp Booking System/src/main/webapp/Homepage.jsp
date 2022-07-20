@@ -87,7 +87,7 @@
 						<a class="nav-link" href="#">HOME</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">ACCOUNT</a>
+						<a class="nav-link" onclick="window.location.href='ViewAcc.jsp';">ACCOUNT</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">BOOKING HISTORY</a>

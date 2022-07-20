@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+<% if(session.getAttribute("participant_phonenum")==null)
+	response.sendRedirect("index.jsp");
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -139,15 +144,17 @@ figure {
 				<div class="view-account">
 					<div class="signup-form">
 						<h2 class="form-title">Your Account</h2>
-						<form method=" " action="" class="register-form"
+						<form method="post" action="participant" class="register-form"
 							id="register-form">
+							 <input type=hidden name="participant_phonenum"  value="${participant_phonenum}" >
 							<div class="form-group">
-								<label for="name">Name:</label>${name}
+								<label for="name">Name:</label>${participant_name}
 							</div>
 							<div class="form-group">
-								<label for="email">E-mail: </label>${email}
+								<label for="email">E-mail: </label>${participant_email}
+							</div>
 							<div class="form-group">
-								<label for="contact">Phone Number:</label>${contact}
+								<label for="contact">Phone Number:</label>${participant_contact}
 							</div>
 							<div class="form-group form-button">
 								<input type="submit" name="signup" id="signup" class="form-submit" value="Update" />
