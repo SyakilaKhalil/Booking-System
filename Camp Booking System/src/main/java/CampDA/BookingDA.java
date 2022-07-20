@@ -46,8 +46,10 @@ public class BookingDA {
             preparedStatement.setString(6, mem.getTent_type());
             preparedStatement.setString(7, mem.getTent_quantity());
             preparedStatement.executeUpdate();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        con.close();
     }
 }

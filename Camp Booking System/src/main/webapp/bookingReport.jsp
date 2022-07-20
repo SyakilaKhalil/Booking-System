@@ -4,7 +4,10 @@
     <% if(session.getAttribute("staff_email")==null)
 	response.sendRedirect("LoginStaff.jsp");
 %>
-
+<%@page import="CampDA.DB"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,7 +64,11 @@
 	</style>
 </head>
 <body>
-	
+	<%!
+            Connection con = null;
+            PreparedStatement ps = null;
+            ResultSet rs = null;
+        %>
 	<section class="Form my-4 mc-5">
 	<div class="container">
 		<div class="row">
@@ -75,16 +82,24 @@
 			<th>Check-in Date</th>
 			<th>Check-out Date</th>
 			<th>Remarks</th>
-		</tr>	
-		<tr>
-			<td>${name}</td>
-			<td>${contact}</td>
-			<td>${pax}</td>
-			<td>${contact}</td>
-			<td>${date}</td>
-			<td>${date}</td>
-			<td>${remark}</td>
-		</tr>	
+		</tr>
+		
+		<%
+            con = DB.getConnection();
+            String sql = "select participant_name, participant_phonenum, no_pax, checkin_date, checkout_date, remarks from campsite join participant using (participant_phonenum)";
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+            %>	
+			<tr>
+            	<td><%=rs.getString(1)%></td>
+            	<td><%=rs.getString(2)%></td>
+            	<td><%=rs.getString(3)%></td>
+                <td><a href="deleteParticipant?phonenum=<%=rs.getString(2)%>">Delete</a></td>
+            </tr>
+            <%
+                } con.close();
+            %>	
 		</table>
 		</div>
 	</div>

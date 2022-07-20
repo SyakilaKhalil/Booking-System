@@ -105,7 +105,7 @@
 			<p class="text-center ">
 				Campgrounds await your exploration and discovery throughout Malaysia. 
 			</p>
-			<a onclick="window.location.href='Bookingform.jsp';" class="btn btn-md text-center mt-5">VIEW REPORT</a>
+			<a onclick="window.location.href='bookingReport.jsp';" class="btn btn-md text-center mt-5">VIEW REPORT</a>
 		
 		</div>
 	</div>

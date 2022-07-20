@@ -49,6 +49,7 @@ public class ParticipantDA {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        con.close();
     }
 	//for login account participant
 	public void participantLogin(Participant mem) throws SQLException {
@@ -63,6 +64,7 @@ public class ParticipantDA {
 	        } catch (SQLException e) {
 	            e.printStackTrace();
 	        }
+		con.close();
 	}
 	/*public static Participant getInfoByEmail(String participant_email, String participant_password) throws SQLException {
 		Participant  i=new Participant ();

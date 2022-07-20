@@ -91,7 +91,7 @@
                 <td><a href="deleteParticipant?phonenum=<%=rs.getString(4)%>">Delete</a></td>
             </tr>
             <%
-                }
+                } con.close();
             %>
 		</table>
 		</div>
