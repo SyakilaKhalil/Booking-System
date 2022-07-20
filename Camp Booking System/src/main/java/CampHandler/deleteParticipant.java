@@ -45,7 +45,7 @@ public class deleteParticipant extends HttpServlet {
 	            ps.setString(1, phonenum);
 
 	            ps.executeUpdate();
-	            response.sendRedirect("khairatacceptor.jsp");
+	            response.sendRedirect("ViewStaffAcc.jsp");
 
 	        } catch (Exception e) {
 	            // TODO Auto-generated catch block
