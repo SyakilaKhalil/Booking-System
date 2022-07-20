@@ -29,7 +29,7 @@ public class LoginHandler extends HttpServlet {
         super();
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	String participant_email=request.getParameter("participant_name");
+    	String participant_email=request.getParameter("participant_email");
     	String participant_password=request.getParameter("participant_password");
 
 		//Create session
