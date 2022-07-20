@@ -4,7 +4,10 @@
     <% if(session.getAttribute("staff_email")==null)
 	response.sendRedirect("LoginStaff.jsp");
 %>
-
+<%@page import="CampDA.DB"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,22 +64,35 @@
 	</style>
 </head>
 <body>
-	
+	<%!
+            Connection con = null;
+            PreparedStatement ps = null;
+            ResultSet rs = null;
+        %>
 	<section class="Form my-4 mc-5">
 	<div class="container">
 		<div class="row">
 			<img src="banner.png" alt="Banner" style="width:100%;">
 		<table class= "center">
-		<tr>
-			<th>Name</th>
-			<th>Email</th>
-			<th>Contact No</th>
-		</tr>	
-		<tr>
-			<td>${name}</td>
-			<td>${email}</td>
-			<td>${contact}</td>
-		</tr>	
+		 <tr>
+                <th>Name</th><th>Email</th><th>Phone Number</th>
+            </tr>	
+            <%
+            con = DB.getConnection();
+            String sql = "select * from participant";
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+            %>
+			<tr>
+            	<td><%=rs.getString(1)%></td>
+            	<td><%=rs.getTimestamp(2)%></td>
+            	<td><%=rs.getString(4)%></td>
+                <td><a href="deleteParticipant?phonenum=<%=rs.getString(4)%>">Delete</a></td>
+            </tr>
+            <%
+                }
+            %>
 		</table>
 		</div>
 	</div>
