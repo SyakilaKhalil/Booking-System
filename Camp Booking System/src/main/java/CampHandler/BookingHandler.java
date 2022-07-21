@@ -52,23 +52,27 @@ public class BookingHandler extends HttpServlet {
 			HttpSession session=request.getSession(false);
 			String no_pax= request.getParameter("no_pax");
 			String site_type=request.getParameter("site_type");
+			String tent_type=request.getParameter("tent_type");
+			String tent_quantity=request.getParameter("tent_quantity");
 			String checkin_date=request.getParameter("checkin_date");
 			String checkout_date=request.getParameter("checkout_date");
 			String remarks=request.getParameter("remarks");
-			String tent_type=request.getParameter("tent_type");
-			String tent_quantity=request.getParameter("tent_quantity");
-			String participant_phonenum=(String)session.getAttribute("participant_email");
-		Campsite mem = new Campsite();
-		mem.setNo_pax(no_pax);
-		mem.setSite_type(site_type);
-		mem.setCheckin_date(checkin_date);
-		mem.setCheckout_date(checkout_date);
-		mem.setRemarks(remarks);
-		mem.setSite_type(tent_type);
-		mem.setTent_quantity(tent_quantity);
-		mem.setParticipant_phonenum(participant_phonenum);
-		rd.bookingCamp(mem);
-        response.sendRedirect("Homepage.jsp");	
+			String participant_phonenum=request.getParameter("participant_email");
+			//String participant_phonenum=(String)session.getAttribute("participant_email");
+		
+			Campsite mem = new Campsite();
+		
+			mem.setNo_pax(no_pax);
+			mem.setSite_type(site_type);
+			mem.setCheckin_date(checkin_date);
+			mem.setCheckout_date(checkout_date);
+			mem.setRemarks(remarks);
+			mem.setSite_type(tent_type);
+			mem.setTent_quantity(tent_quantity);
+			mem.setParticipant_phonenum(participant_phonenum);
+			
+			rd.bookingCamp(mem);
+			response.sendRedirect("Homepage.jsp");	
 		
 	}
 	
